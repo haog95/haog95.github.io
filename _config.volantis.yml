@@ -86,7 +86,7 @@ article:
     # show readmore button
     readmore: auto # auto, always
   body:
-    top_meta: [author, category, date]
+    top_meta: [author, category, date,tags]
     meta_library:
       author:
         avatar: volantis-static/media/org.volantis/blog/favicon/apple-touch-icon.png
@@ -146,6 +146,7 @@ sidebar:
     avatar:  # 重命名组件ID为avatar（更直观）
       class: qrcode  # 复用qrcode的样式类（适合展示图片）
       display: [desktop, mobile]  # 桌面和移动端都显示
+      
       header:
         icon: fa-solid fa-user  # 头像区域标题图标（用户图标）
         title: 郭世豪 XDU本科CS在读  # 头像区域标题
