@@ -4,7 +4,6 @@ author: 郭世豪
 date: 2025-08-05 
 categories:  
   - 论文阅读
-  - Agent
 tags:  # 标签（多个标签用数组表示）
   - Multi-Agent
   - Social Interaction
