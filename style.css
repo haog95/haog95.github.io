@@ -1,0 +1,242 @@
+:root {
+    --font-main: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --color-bg: #ffffff;
+    --color-text: #333333;
+    --color-text-light: #666666;
+    --color-accent: #0066cc; /* 学术蓝 */
+    --color-hover-bg: #f9f9f9;
+    --sidebar-width: 280px;
+    --container-max-width: 1100px;
+}
+
+/* 全局重置 */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: var(--font-main);
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+a { color: var(--color-accent); text-decoration: none; transition: all 0.2s; }
+a:hover { text-decoration: underline; opacity: 0.8; }
+
+html { scroll-behavior: smooth; }
+
+/* 布局系统：Grid */
+.container {
+    display: grid;
+    grid-template-columns: var(--sidebar-width) 1fr; /* 左侧固定，右侧自适应 */
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+/* 侧边栏样式 */
+.sidebar {
+    padding: 60px 40px;
+    background: #fff; /* 可选：改为 #fcfcfc 增加极微弱的层次感 */
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    border-right: 1px solid #eaeaea; /* 细微的分隔线 */
+    text-align: right; /* 学术主页常见的右对齐风格，若不习惯可改为 left */
+}
+
+.avatar {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.sidebar h1 { font-size: 1.8rem; font-weight: 700; margin-bottom: 5px; letter-spacing: -0.5px; }
+.subtitle { color: var(--color-text-light); font-size: 1rem; margin-bottom: 25px; }
+.subtitle .uni-logo {
+    height: 1rem;
+    vertical-align: middle;
+    margin: 0 4px;
+    border-radius: 2px;
+}
+.bio-title { font-size: 0.85rem; font-weight: 600; color: var(--color-accent); margin-top: 20px; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+.bio-text { font-size: 0.9rem; color: var(--color-text-light); margin-bottom: 15px; line-height: 1.6; }
+
+.social-links { margin-bottom: 20px; font-size: 0.9rem; }
+.social-links a { margin: 0 5px; color: var(--color-text); font-weight: 500; display: block; margin-bottom: 8px; }
+.social-links a:hover { color: var(--color-accent); }
+.social-links i { width: 20px; text-align: center; margin-right: 5px; }
+
+.academic-logos {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+.academic-logos a {
+    font-size: 1.2rem;
+    color: var(--color-text-light);
+}
+.academic-logos a:hover { color: var(--color-accent); }
+
+.nav-links { display: flex; flex-direction: column; gap: 10px; }
+.nav-links a { color: var(--color-text-light); font-weight: 500; }
+.nav-links a:hover { color: var(--color-accent); translate: -5px 0; /* 悬停微动效果 */ }
+
+/* 主要内容区域 */
+.content {
+    padding: 60px 60px;
+}
+
+section { margin-bottom: 60px; }
+
+h2 {
+    font-size: 1.5rem;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    font-weight: 600;
+    color: #111;
+}
+
+h3 {
+    font-size: 1.2rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.pub-category {
+    font-size: 1rem;
+    color: var(--color-accent);
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+p { margin-bottom: 15px; text-align: justify; }
+
+/* News 列表风格 */
+.news-list { list-style: none; }
+.news-list li {
+    display: flex;
+    margin-bottom: 12px;
+    align-items: baseline;
+}
+.news-list .date {
+    width: 100px;
+    flex-shrink: 0;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    font-feature-settings: "tnum"; /* 等宽数字 */
+}
+
+/* Publications/Projects 列表风格 */
+.pub-item {
+    margin-bottom: 25px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.pub-item::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--color-text-light);
+    font-weight: bold;
+}
+
+/* 缩略图区域 */
+.pub-thumb { width: 160px; flex-shrink: 0; }
+.placeholder-img {
+    width: 100%;
+    height: 100px;
+    background: #eaeaea;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.pub-info { flex: 1; }
+.pub-title { font-size: 1.05rem; font-weight: 600; margin-bottom: 5px; color: #000; line-height: 1.4; }
+.pub-authors { font-size: 0.95rem; color: var(--color-text-light); margin-bottom: 5px; }
+.pub-venue { font-style: italic; font-size: 0.9rem; color: #555; margin-bottom: 8px; }
+.pub-desc { font-size: 0.9rem; color: #666; margin-bottom: 8px; }
+.pub-links { margin-top: 8px; }
+.pub-links a {
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-right: 15px;
+    text-transform: none;
+}
+.pub-links i { margin-right: 4px; }
+
+/* Interests & Teaching Lists */
+.interests-list, .teaching-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.interests-list li, .teaching-list li {
+    margin-bottom: 12px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.interests-list li::before, .teaching-list li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: bold;
+}
+
+/* 响应式设计 (Mobile Adaptation) */
+@media (max-width: 768px) {
+    .container { grid-template-columns: 1fr; } /* 变为单栏 */
+
+    .sidebar {
+        height: auto;
+        position: relative;
+        text-align: center; /* 移动端改为居中 */
+        border-right: none;
+        border-bottom: 1px solid #eaeaea;
+        padding: 40px 20px;
+    }
+
+    .social-links a { text-align: center; }
+    .academic-logos { justify-content: center; }
+
+    .nav-links {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .nav-links a:hover { translate: 0 0; }
+
+    .content { padding: 40px 20px; }
+
+    .pub-item { padding-left: 0; }
+    .pub-item::before { display: none; }
+
+    .interests-list li, .teaching-list li { padding-left: 0; }
+    .interests-list li::before, .teaching-list li::before { display: none; }
+}
+
+/* Footer */
+.footer {
+    margin-top: 80px;
+    padding-top: 30px;
+    border-top: 1px solid #eaeaea;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+}
+
+.footer p { margin-bottom: 5px; }
