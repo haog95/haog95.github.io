@@ -24,8 +24,9 @@
                 <p class="bio-text">
                     Multi-agent Systems<br>
                     Reinforcement Learning<br>
-                    Recommendation System<br>
+                    Semi-supervised Learning<br>
                     AI for Science<br>
+                    Recommendation System<br>
                 </p>
 
                 <div class="social-links">
@@ -57,7 +58,10 @@
                     I am an undergraduate student at the School of Computer Science and Technology, Xidian University (expected 2027). I am deeply focused on the frontiers of LLM Agents and Recommendation Systems, maintaining a strong passion for agile learning and bridging cutting-edge research with solid engineering execution.
                 </p>
                 <p>
-                    My research interests primarily lie in AI for Science, Multi-agent Systems, and Reinforcement Learning. Currently, I serve as a Research Assistant at HKUST-GZ. Previously, I gained valuable industrial experience as an AI Engineer Intern at Huawei 2012 Labs, where my intelligent cache optimization algorithms were successfully deployed in commercial OS environments.
+                    My research interests primarily lie in Multi-agent Systems, Reinforcement Learning, Semi-supervised Learning, and AI for Science. I am currently a Research Assistant at the <strong>ISET Lab, Xidian University</strong>, working on multi-agent group recommendation and collaborative course recommendation. Previously, I was a Research Assistant at the <strong>AIMS Lab, HKUST-GZ</strong>, focusing on mass spectrometry prediction and semi-supervised learning algorithms.
+                </p>
+                <p>
+                    I also gained valuable industrial experience as an AI Engineer Intern at <strong>Huawei 2012 Labs</strong>, where my intelligent cache optimization algorithms were successfully deployed in commercial HarmonyOS environments.
                 </p>
             </section>
 
@@ -65,20 +69,24 @@
                 <h2>News</h2>
                 <ul class="news-list">
                     <li>
-                        <span class="date">Oct 2025</span>
-                        <span class="text">Joined <strong>Hong Kong University of Science and Technology (Guangzhou)</strong> as a Research Assistant focusing on AI for Science.</span>
+                        <span class="date">Mar 2026</span>
+                        <span class="text">Completed research assistantship at <strong>HKUST-GZ AIMS Lab</strong>. Worked on mass spectrometry prediction and semi-supervised learning.</span>
                     </li>
                     <li>
                         <span class="date">Dec 2025</span>
-                        <span class="text">Completed research internship at <strong>Huawei 2012 Labs</strong> as an AI Engineer.</span>
+                        <span class="text">Completed AI Engineer internship at <strong>Huawei 2012 Labs</strong>. DQN-based cache optimization deployed in WPS HarmonyOS.</span>
                     </li>
                     <li>
                         <span class="date">Nov 2025</span>
+                        <span class="text">Won the <strong>National Scholarship</strong> (Top 0.2%, Ministry of Education of China).</span>
+                    </li>
+                    <li>
+                        <span class="date">Oct 2025</span>
                         <span class="text">Won the <strong>National Grand Prize</strong> (Highest Honor) in the 19th "Challenge Cup" National College Students' Extracurricular Academic Science and Technology Contest.</span>
                     </li>
                     <li>
-                        <span class="date">Nov 2025</span>
-                        <span class="text">Awarded the <strong>National Scholarship</strong> (Top 0.2%, Ministry of Education of China).</span>
+                        <span class="date">Dec 2025</span>
+                        <span class="text">Paper <strong>AgentGR</strong> submitted to <strong>SIGIR 2026</strong> (CCF A, under review).</span>
                     </li>
                 </ul>
             </section>
@@ -105,11 +113,22 @@
 
                 <div class="pub-item">
                     <div class="pub-info">
-                        <h3 class="pub-title">Intelligent Mass Spectrometry Prediction System based on Autoregressive Graph Transformers</h3>
+                        <h3 class="pub-title">Intelligent Mass Spectrometry Prediction System based on Autoregressive Graph Transformers (AC-AR-GT)</h3>
                         <div class="pub-authors"><strong>Shihao Guo</strong></div>
-                        <div class="pub-venue">Research Assistant, HKUST-GZ | Oct 2025 – Present</div>
+                        <div class="pub-venue">Research Assistant, AIMS Lab, HKUST-GZ | Dec 2025 – Mar 2026</div>
                         <p class="pub-desc">
-                            Addressing the limitations of traditional mass spectrometry prediction in modeling molecular fragmentation pathways. Constructed a molecular graph encoder using <strong>Graph Transformers</strong>, integrating quantum chemical Bond Dissociation Energy (BDE) features. Designed an autoregressive fragmentation generation network optimized with <strong>PPO reinforcement learning</strong> to simulate and predict highly accurate mass spectrometry fragmentation paths.
+                            Proposed AC-AR-GT, a novel system integrating autoregressive Graph Transformers with bond dissociation energy features for mass spectrometry prediction. Constructed a molecular graph encoder using <strong>Graph Transformers</strong>, incorporated historical fragment embedding via <strong>AdaLN</strong> for unified modeling of molecule-fragment interactions. Optimized with <strong>PPO reinforcement learning</strong> to navigate massive action spaces, achieving superior predictive performance over traditional static models.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="pub-item">
+                    <div class="pub-info">
+                        <h3 class="pub-title">SemiDis: Semi-supervised Learning Algorithm with Adaptive Temperature</h3>
+                        <div class="pub-authors"><strong>Shihao Guo</strong></div>
+                        <div class="pub-venue">Research Assistant, AIMS Lab, HKUST-GZ | Dec 2025 – Mar 2026</div>
+                        <p class="pub-desc">
+                            Addressed the limitations of <strong>FixMatch</strong> semi-supervised algorithm's global fixed confidence threshold. Proposed <strong>SemiDis</strong> by designing sample-wise reliability scores r(x) and dynamic adaptive temperature T(x) to convert reliability into probability thresholds. Introduced <strong>KL divergence</strong> based knowledge distillation loss to transfer distribution information from pseudo-labels. Implemented with <strong>USB</strong> framework supporting DDP distributed training.
                         </p>
                     </div>
                 </div>
@@ -118,9 +137,9 @@
                     <div class="pub-info">
                         <h3 class="pub-title">AgentGR: Multi-agent Group Recommendation System</h3>
                         <div class="pub-authors">Co-authors, <strong>Shihao Guo (Student 2nd Author)</strong></div>
-                        <div class="pub-venue">Submitted to SIGIR 2026 (Under Review) | Feb 2025 – Dec 2025</div>
+                        <div class="pub-venue">Submitted to SIGIR 2026 (CCF A, Under Review) | Nov 2024 – Present | Xidian ISET Lab</div>
                         <p class="pub-desc">
-                            Proposed a Multi-agent framework to address data sparsity in group recommendation. Designed semantic meta-path preference reasoning mechanisms and Leader-aware decision strategies to model user group collaboration. Leveraged agents' reasoning capabilities to simulate group interactions, improving NDCG and HitRate metrics by over <strong>10%</strong> compared to baselines.
+                            Proposed a Multi-agent framework to address data sparsity in group recommendation. Each group member is simulated by an <strong>LLM-driven Agent</strong> that reasons with personal preferences, then integrates via collaboration–negotiation mechanisms. Designed semantic meta-path preference reasoning, <strong>Leader-aware decision strategies</strong>, and robust training with multi-source noise to model dynamic group interactions, improving NDCG and HitRate by over <strong>10%</strong>.
                         </p>
                         <div class="pub-links">
                             <a href="#"><i class="fas fa-file-pdf"></i> PDF</a>
@@ -131,25 +150,11 @@
 
                 <div class="pub-item">
                     <div class="pub-info">
-                        <h3 class="pub-title">RL-based Intelligent Image Cache Model</h3>
-                        <div class="pub-authors"><strong>Shihao Guo</strong></div>
-                        <div class="pub-venue">AI Engineer Intern, Huawei 2012 Labs | Aug 2025 – Dec 2025</div>
-                        <p class="pub-desc">
-                            Addressed the limitations of traditional caching policies (FIFO/LRU) by developing a <strong>Deep Q-Network (DQN)</strong> based model in PyTorch. Innovatively fused multi-dimensional image metadata with user behavior using <strong>Self-Attention mechanisms</strong> to quantify user preferences. Improved hit rate from 2% to 40% in extremely small memory scenarios. <em>This technology is actively being deployed in the WPS HarmonyOS version.</em>
-                        </p>
-                        <div class="pub-links">
-                            <a href="#"><i class="fas fa-file-pdf"></i> Report</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="pub-item">
-                    <div class="pub-info">
-                        <h3 class="pub-title">MA4CR: Multi-Agent Online Course Recommendation Framework</h3>
+                        <h3 class="pub-title">MA4CR: Multi-Agent Collaborative Online Course Recommendation Framework</h3>
                         <div class="pub-authors"><strong>Shihao Guo (Student 1st Author)</strong></div>
-                        <div class="pub-venue">Submitted to Acta Automatica Sinica | "Challenge Cup" National Grand Prize | May 2025 – Feb 2026</div>
+                        <div class="pub-venue">Submitted to Acta Automatica Sinica (CCF T1) | Nov 2024 – Present | Xidian ISET Lab</div>
                         <p class="pub-desc">
-                            Proposed <strong>MA4CR</strong>, a recommendation framework built with <strong>AutoGen</strong> to simulate learners' cognitive processes through collaborative agents. Designed cognitive state and learning preference memory mechanisms, integrated with a long/short-term dual-strategy recommendation model, enabling precise knowledge tracing and personalized course delivery.
+                            Proposed <strong>MA4CR</strong>, a recommendation framework built with <strong>AutoGen</strong> to simulate learners' cognitive processes through collaborative agents. Designed cognitive state and learning preference memory mechanisms, integrated with a long/short-term dual-strategy recommendation model, enabling precise knowledge tracing and personalized course delivery. <em>This project won the "Challenge Cup" National Grand Prize.</em>
                         </p>
                     </div>
                 </div>
@@ -173,11 +178,25 @@
 
                 <div class="pub-item">
                     <div class="pub-info">
+                        <h3 class="pub-title">RL-based Intelligent Image Cache Model</h3>
+                        <div class="pub-authors"><strong>Shihao Guo</strong></div>
+                        <div class="pub-venue">AI Engineer Intern, Huawei 2012 Labs | Aug 2025 – Dec 2025</div>
+                        <p class="pub-desc">
+                            Addressed the limitations of traditional caching policies (FIFO/LRU) by developing a <strong>Deep Q-Network (DQN)</strong> based model in PyTorch. Innovatively fused multi-dimensional image metadata with user behavior using <strong>Self-Attention mechanisms</strong> to quantify user preferences. Improved hit rate from 2% to 40% in extremely small memory scenarios. <em>This technology is actively being deployed in the WPS HarmonyOS version.</em>
+                        </p>
+                        <div class="pub-links">
+                            <a href="#"><i class="fas fa-file-pdf"></i> Report</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-item">
+                    <div class="pub-info">
                         <h3 class="pub-title">Automated Toolchain for HarmonyOS based on Qwen-Agent</h3>
                         <div class="pub-authors"><strong>Shihao Guo</strong></div>
                         <div class="pub-venue">Huawei Internship Project | Aug 2025 – Dec 2025</div>
                         <p class="pub-desc">
-                            Built an automation tool using <strong>Qwen-Agent</strong> to resolve the high manual cost of adapting Mworks underlying Python whl packages for HarmonyOS. Deployed <strong>Qwen-8b</strong> to handle source code downloading, compiling, testing, and log analysis, achieving a fully automated closed-loop evaluation workflow.
+                            Built an automation tool using <strong>Qwen-Agent</strong> to resolve the high manual cost of adapting Mworks underlying Python whl packages for HarmonyOS. Deployed <strong>Qwen-8B</strong> to handle source code downloading, compiling, testing, and log analysis, achieving a fully automated closed-loop evaluation workflow. The toolchain was integrated into the Mworks backend system.
                         </p>
                         <div class="pub-links">
                             <a href="#"><i class="fas fa-file-pdf"></i> Report</a>
@@ -197,7 +216,7 @@
                     <div class="pub-info">
                         <h3 class="pub-title">National Grand Prize (Highest Honor)</h3>
                         <div class="pub-venue">The 19th "Challenge Cup" National College Students' Extracurricular Academic Science and Technology Contest</div>
-                        <div class="pub-authors">Nov 2025</div>
+                        <div class="pub-authors">Oct 2025</div>
                     </div>
                 </div>
 
@@ -209,21 +228,63 @@
                     </div>
                 </div>
 
+                <div class="pub-item">
+                    <div class="pub-info">
+                        <h3 class="pub-title">National Ideological and Political Education Outstanding Case Award</h3>
+                        <div class="pub-venue">China Association of Higher Education, 2025</div>
+                        <div class="pub-authors">Sep 2025</div>
+                    </div>
+                </div>
+
                 <h3 class="pub-category">[Provincial Level]</h3>
 
                 <div class="pub-item">
                     <div class="pub-info">
-                        <h3 class="pub-title">First Prize</h3>
-                        <div class="pub-venue">The 16th National College Student Mathematics Competition (Shaanxi Province)</div>
-                        <div class="pub-authors">Dec 2024</div>
+                        <h3 class="pub-title">Provincial Gold & Bronze Award</h3>
+                        <div class="pub-venue">China International College Students' Innovation Competition (Shaanxi Province)</div>
+                        <div class="pub-authors">Sep 2025</div>
                     </div>
                 </div>
 
                 <div class="pub-item">
                     <div class="pub-info">
-                        <h3 class="pub-title">Provincial Gold/Bronze Award</h3>
-                        <div class="pub-venue">China International College Students' Innovation Competition (Shaanxi)</div>
-                        <div class="pub-authors">Sep 2025</div>
+                        <h3 class="pub-title">First Prize, College Student Category A (Class CMS)</h3>
+                        <div class="pub-venue">The 16th National College Student Mathematics Competition (Shaanxi Province)</div>
+                        <div class="pub-authors">Dec 2024</div>
+                    </div>
+                </div>
+
+                <h3 class="pub-category">[University Level]</h3>
+
+                <div class="pub-item">
+                    <div class="pub-info">
+                        <h3 class="pub-title">University Grand Prize & Gold Prize</h3>
+                        <div class="pub-venue">The 19th "Challenge Cup" Xidian University Competition</div>
+                        <div class="pub-authors">Nov 2025</div>
+                    </div>
+                </div>
+
+                <div class="pub-item">
+                    <div class="pub-info">
+                        <h3 class="pub-title">Second Prize</h3>
+                        <div class="pub-venue">The 11th National College Student Statistical Modeling Competition (Xidian University Level)</div>
+                        <div class="pub-authors">May 2025</div>
+                    </div>
+                </div>
+
+                <div class="pub-item">
+                    <div class="pub-info">
+                        <h3 class="pub-title">Outstanding Award</h3>
+                        <div class="pub-venue">The 36th "Huawei Cup" China Post-Graduate Mathematical Modeling Competition (School Level)</div>
+                        <div class="pub-authors">Sep 2024</div>
+                    </div>
+                </div>
+
+                <div class="pub-item">
+                    <div class="pub-info">
+                        <h3 class="pub-title">Comprehensive Development Scholarship — First Prize</h3>
+                        <div class="pub-venue">Xidian University, 2023–2024</div>
+                        <div class="pub-authors">2024</div>
                     </div>
                 </div>
 
@@ -232,15 +293,18 @@
             <section id="activities">
                 <h2>Activities & Miscellanea</h2>
                 <ul class="interests-list">
-                    <li><strong>International Exchange:</strong> Selected for the UN Sustainable Development Goals (SDGs) Elite Talent Program in <strong>Tokyo, Japan</strong> (July 2025).</li>
-                    <li><strong>Leadership:</strong> Class Monitor & Student Community Grid Member at Xidian University. Led a summer practice team reported by <em>People's Daily</em>.</li>
-                    <li><strong>Arts:</strong> Won the <strong>Special Prize</strong> (Highest Honor) in the 38th Campus Dance Competition.</li>
+                    <li><strong>International Exchange:</strong> Selected for the <strong>UNITAR Youth Leadership for SDGs</strong> program in <strong>Tokyo, Japan</strong> (July 2025). Successfully completed the program and received a certificate signed by UN officials.</li>
+                    <li><strong>Social Practice:</strong> Participated in the "Red Responsibility Pursuit" specialized social practice program (July 2025). Led a summer practice team reported by <em>People's Daily</em>.</li>
+                    <li><strong>Leadership:</strong> Class Monitor & Student Community Grid Member at Xidian University (2023–Present). Managed the "Excellent Communist Youth League Branch" twice (2024, 2025). Served as a Student Development Committee Member (2024–2025).</li>
+                    <li><strong>Military Training:</strong> Awarded <strong>"Outstanding Trainee"</strong> during university military training (Sept 2024), selected as the flag bearer.</li>
+                    <li><strong>Ideological & Political:</strong> Awarded <strong>First Prize</strong> in the campus Ideological and Political course competition (Nov 2025). Actively participated in Xi Jinping Thought study activities.</li>
+                    <li><strong>Arts:</strong> Won the <strong>Special Prize</strong> (Highest Honor) in the 38th Campus Dance Competition and <strong>Outstanding Performance Award</strong> in the 39th Campus Art Festival.</li>
                 </ul>
             </section>
 
             <footer class="footer">
                 <p>&copy; 2026 Shihao Guo. Built with simple HTML & CSS.</p>
-                <p>Last updated: March 2026</p>
+                <p>Last updated: April 2026</p>
             </footer>
         </main>
     </div>
